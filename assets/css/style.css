@@ -227,9 +227,24 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  height: 60vh;
+  background: #000;
   background-size: cover;
+  padding: 0;
+}
+/* Background Animation
+ # https://codepen.io/hylobates-lar/pen/qBbQeON */
+ #hero .hero-background {
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(-45deg, #500c6d, #3b7edb, #641287);
+  background-size: 300% 300%;
+  animation: gradient 8s ease infinite;
+}
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 #hero:before {
